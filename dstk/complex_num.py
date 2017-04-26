@@ -1,5 +1,5 @@
 
-class complex_num:
+class complex_num():
 
 	def __init__(self, r, i):
 		self.real = r
