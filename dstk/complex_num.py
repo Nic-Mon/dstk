@@ -14,9 +14,9 @@ class complex_num():
 		self.real += other_complex.real
 		self.imaginary += other_complex.imaginary
 
-	def subtract_complex(self, other_complex):
-		self.real -= other_complex.real
-		self.imaginary -= other_complex.imaginary
+	# def subtract_complex(self, other_complex):
+	# 	self.real -= other_complex.real
+	# 	self.imaginary -= other_complex.imaginary
 
 	def __eq__(self, other):
 		"""Override the default Equals behavior"""
