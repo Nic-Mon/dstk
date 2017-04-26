@@ -5,12 +5,12 @@ def test_canCreateComplex():
 
 def test_absFunctionsCorrectlyOnRealOnly():
 	four = complex(4,0)
-	assert four.abs() == 4
+	assert four.absolute_val() == 4
 
 def test_absFunctionsCorrectlyOnImaginaryOnly():
 	Ithree = complex(0,3)
-	assert 3 == Ithree.abs()
+	assert 3 == Ithree.absolute_val()
 
 def test_absFunctionsCorrectly():
 	num = complex(3,4)
-	assert num.abs() == 5
+	assert num.absolute_val() == 5
