@@ -4,7 +4,7 @@ def test_canCreateComplex():
 	two = complex(2, 0)
 
 def test_absFunctionsCorrectlyOnRealOnly():
-	four = complex(4,0).
+	four = complex(4,0)
 	assertEquals(four.abs(), 4)
 
 def test_absFunctionsCorrectlyOnImaginaryOnly():
