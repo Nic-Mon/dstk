@@ -15,3 +15,13 @@ def test_absFunctionsCorrectlyOnImaginaryOnly():
 def test_absFunctionsCorrectly():
 	num = complex_num(3,4)
 	assert num.absolute_val() == 5
+
+def test_addComplex():
+	num1 = complex_num(5,8)
+	num2 = complex_num(12,3)
+	assert num2.add(num1) == complex_num(17,11)
+
+def test_subtractComplex():
+	num1 = complex_num(5,8)
+	num2 = complex_num(12,3)
+	assert num2.subract(num1) == complex_num(7,-5)
