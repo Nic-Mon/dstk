@@ -6,5 +6,5 @@ class complex:
 		this.imaginary = i
 
 	def abs(self):
-		return sqrt(r*r + i*i)
+		return sqrt(real*real + imaginary*imaginary)
 
