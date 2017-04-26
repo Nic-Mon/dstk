@@ -21,12 +21,12 @@ class complex_num():
 		return self
 
 	def __eq__(self, other):
-    	"""Override the default Equals behavior"""
-    	if isinstance(other, self.__class__):
-        return self.__dict__ == other.__dict__
-    	return False
+		"""Override the default Equals behavior"""
+		if isinstance(other, self.__class__):
+	    return self.__dict__ == other.__dict__
+		return False
 
-    def __ne__(self, other):
-    	"""Define a non-equality test"""
-    	return not self.__eq__(other)
+	def __ne__(self, other):
+		"""Define a non-equality test"""
+		return not self.__eq__(other)
 
