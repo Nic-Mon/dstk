@@ -13,7 +13,9 @@ class complex_num():
 	def add(self, other_complex):
 		self.real += other_complex.real
 		self.imaginary += other_complex.imaginary
+		return self
 
 	def subtract(self, other_complex):
 		self.real -= other_complex.real
 		self.imaginary -= other_complex.imaginary
+		return self

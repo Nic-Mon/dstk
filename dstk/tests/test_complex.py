@@ -19,9 +19,11 @@ def test_absFunctionsCorrectly():
 def test_addComplex():
 	num1 = complex_num(5,8)
 	num2 = complex_num(12,3)
-	assert num2.add(num1) == complex_num(17,11)
+	num2.add(num1)
+	assert num2 == complex_num(17,11)
 
 def test_subtractComplex():
 	num1 = complex_num(5,8)
 	num2 = complex_num(12,3)
-	assert num2.subract(num1) == complex_num(7,-5)
+	num2.subract(num1)
+	assert num2 == complex_num(7,-5)
