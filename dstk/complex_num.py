@@ -7,5 +7,5 @@ class complex_num():
 		self.imaginary = i
 
 	def absolute_val(self):
-		return sqrt(real*real + imaginary*imaginary)
+		return sqrt(self.real*self.real + self.imaginary*self.imaginary)
 
