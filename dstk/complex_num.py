@@ -1,7 +1,7 @@
 
 class complex_num:
 
-	__init__(self, r, i):
+	def __init__(self, r, i):
 		self.real = r
 		self.imaginary = i
 
