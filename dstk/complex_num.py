@@ -10,10 +10,10 @@ class complex_num():
 	def absolute_val(self):
 		return sqrt(self.real*self.real + self.imaginary*self.imaginary)
 
-	def add(other_complex):
+	def add(self, other_complex):
 		self.real += other_complex.real
 		self.imaginary += other_complex.imaginary
 
-	def subtract(other_complex):
+	def subtract(self, other_complex):
 		self.real -= other_complex.real
 		self.imaginary -= other_complex.imaginary
