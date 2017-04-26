@@ -21,7 +21,7 @@ class complex_num():
 		return self
 
 	def __eq__(self, other):
-    """Override the default Equals behavior"""
+    	"""Override the default Equals behavior"""
     	if isinstance(other, self.__class__):
         return self.__dict__ == other.__dict__
     	return False
