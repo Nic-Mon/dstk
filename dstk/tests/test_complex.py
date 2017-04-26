@@ -25,5 +25,5 @@ def test_addComplex():
 def test_subtractComplex():
 	num1 = complex_num(5,8)
 	num2 = complex_num(12,3)
-	num2.subract(num1)
+	num2.subract_complex(num1)
 	assert num2 == complex_num(7,-5)
