@@ -10,15 +10,13 @@ class complex_num():
 	def absolute_val(self):
 		return sqrt(self.real*self.real + self.imaginary*self.imaginary)
 
-	def add(self, other_complex):
+	def add_complex(self, other_complex):
 		self.real += other_complex.real
 		self.imaginary += other_complex.imaginary
-		return self
 
 	def subtract(self, other_complex):
 		self.real -= other_complex.real
 		self.imaginary -= other_complex.imaginary
-		return self
 
 	def __eq__(self, other):
 		"""Override the default Equals behavior"""
