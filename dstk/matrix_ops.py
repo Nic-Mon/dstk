@@ -10,3 +10,4 @@ def one_hot_encode(data):
 			line.append(item == d)
 		matrix.append(line)
 	return np.matrix(matrix)
+
