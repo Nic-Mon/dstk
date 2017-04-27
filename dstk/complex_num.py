@@ -14,9 +14,9 @@ class complex_num():
 		self.real += other_complex.real
 		self.imaginary += other_complex.imaginary
 
-	def subtract_complex(self, other_complex):
-		self.real -= other_complex.real
-		self.imaginary -= other_complex.imaginary
+	# def subtract_complex(self, other_complex):
+	# 	self.real -= other_complex.real
+	# 	self.imaginary -= other_complex.imaginary
 
 	def __eq__(self, other):
 		"""Override the default Equals behavior"""
@@ -27,4 +27,3 @@ class complex_num():
 	def __ne__(self, other):
 		"""Define a non-equality test"""
 		return not self.__eq__(other)
-
