@@ -2,7 +2,7 @@ import numpy as np
 
 def one_hot_encode(data):
 	'''takes list of data, returns data one hot encoded into a numpy matrix'''
-	unique_elements = set(data)
+	unique_elements = OrderedSet(data)
 	matrix = []
 	for item in unique_elements:
 		line = []
