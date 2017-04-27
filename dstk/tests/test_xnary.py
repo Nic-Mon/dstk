@@ -3,3 +3,5 @@ from dstk import xnary
 
 def test_canInstantiateBinary:
 	binary_num = xnary(42)
+
+
