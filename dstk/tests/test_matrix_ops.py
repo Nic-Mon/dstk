@@ -1,5 +1,5 @@
 import pytest
-from dstk import matrix_ops
+from matrix_ops import one_hot_encode
 import numpy as np
 
 def test_oneHotEncode():
