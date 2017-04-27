@@ -1,10 +1,9 @@
 from math import log
 
-class xnary():
+class binary():
 	'class to understand X-nary number representations (i.e. binary, trinary, etc.)'
 
-	def __init__(self, n, value):
-		self.n = n
+	def __init__(self, value):
 		self.value = value
 
 	def __int__(self):
