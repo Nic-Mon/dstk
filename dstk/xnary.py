@@ -13,9 +13,9 @@ class xnary():
 	def __str__(self):
 		x = self.value
 		if x == 0:
-        	return '0'
-    	nums = []
-    	while x:
-        	x, r = divmod(x, self.n)
-        	nums.append(str(r))
-    	return ''.join(reversed(nums))
+			return '0'
+		nums = []
+		while x:
+			x, r = divmod(x, self.n)
+			nums.append(str(r))
+		return ''.join(reversed(nums))
