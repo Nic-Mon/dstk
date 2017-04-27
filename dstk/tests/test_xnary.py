@@ -1,5 +1,5 @@
 import pytest
-from dstk.xnary import binary
+from dstk.xnary import xnary
 
 def test_canInstantiateBinary():
 	binary_num = xnary(2, 42)
