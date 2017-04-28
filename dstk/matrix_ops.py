@@ -92,11 +92,26 @@ def read_eq_string(eq_str):
 	arr = np.array([0,0,0,0])
 	for item in var_list:
 		if item[-1] == 'x':
-			arr[0] = float(item[:-1])
+			if len(item) == 1: 
+				arr[0] = 1
+			elif item[:-1] == '-':
+				arr[0] = -1
+			else: 
+				arr[0] = float(item[:-1])
 		elif item[-1] == 'y':
-			arr[1] = float(item[:-1])
+			if len(item) == 1:
+				arr[1] = 1
+			elif item[:-1] == '-':
+				arr[1] = -1
+			else:
+				arr[1] = float(item[:-1])
 		elif item[-1] == 'z':
-			arr[2] = float(item[:-1])
+			if len(item) == 1:
+				arr[2] = 1
+			elif item[:-1] == '-':
+				arr[2] = -1
+			else:
+				arr[2] = float(item[:-1])
 	arr[-1] = float(item[-1])
 	return arr
 
@@ -111,4 +126,4 @@ def solve_system(eq_list):
 	d['x'] = matrix[0,3]
 	d['y'] = matrix[1,3]
 	d['z'] = matrix[2,3]
-	return d_
+	return d
