@@ -23,9 +23,7 @@ def row_echelon_form(matrix):
 
 		for i in range(k+1, m):
 			f = matrix[i, k] / matrix[k, k]
-			for j in range(k+1, n):
-				matrix[i,j] = matrix[i,j] - (matrix[k,j]*f)
-			matrix[i,k] = 0
+			matrix[i,:] = matrix[i,:] - (matrix[k,:]*f)
 		print(matrix)
 	return matrix
 
