@@ -55,3 +55,15 @@ def is_row_echelon(matrix):
 				break
 	return True
 
+def is_reduced_row_echelon(matrix):
+	if(not is_row_echelon(matrix)):
+		return False
+	m,n = matrix.shape
+	leading_coef_col = -1
+	for row in range(m):
+		for col in range(n):
+			if (matrix[row, col] != 0):
+				if (matrix[row, col] != 1): return False
+				break
+	return True
+
