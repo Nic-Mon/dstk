@@ -26,3 +26,8 @@ def test_isReducedRowEchelon():
 
 	assert(not is_reduced_row_echelon(matrix1))
 	assert(is_reduced_row_echelon(matrix2))
+
+def test_reducedRowEchelon():
+	matrix = np.matrix([[2, 1, -1, 8], [-3, -1, 2, -11], [-2, 1, 2, -3]])
+	m1 = reduced_row_echelon(matrix)
+	assert(is_reduced_row_echelon(m1))
