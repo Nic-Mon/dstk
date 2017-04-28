@@ -73,3 +73,42 @@ def reduced_row_echelon(matrix):
 					mat[r,:] = mat[r,:] - mat[r,col]*prow
 				break
 	return mat
+
+def read_eq_string(eq_str):
+	'''only works with 3 vars x, y, z'''
+	var_list = eq.split(' ')
+	rm_indexes = []
+	for i, item in enumerate(var_list):
+		if item == '-':
+			var_list[i+1] = '-' + var_list[i+1]
+			rm_indexes.append(i)
+		elif(item[:2] == '--'):
+			item = item[2:]
+		elif(item == '+' or item == '='):
+			rm_indexes.append(i)
+	for i in reversed(rm_indexes):
+		del rm_indexes[i]
+
+	arr = np.array([0,0,0,0])
+	for item in var_list:
+		if item[-1] == 'x':
+			arr[0] = float(item[:-1])
+		elif item[-1] == 'y':
+			arr[1] = float(item[:-1])
+		elif item[-1] == 'z':
+			arr[2] = float(item[:-1])
+	arr[-1] = float(item[-1])
+	return arr
+
+def solve_system(eq_list):
+	'''solve system of eqs'''
+	mat = []
+	for eq in eq_list:
+		mat.append(read_eq_string(eq))
+	matrix = np.matrix(mat)
+	matrix = reduced_row_echelon(matrix)
+	d = {}
+	d['x'] = matrix[0,3]
+	d['y'] = matrix[1,3]
+	d['z'] = matrix[2,3]
+	return d
