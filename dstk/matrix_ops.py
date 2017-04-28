@@ -76,7 +76,7 @@ def reduced_row_echelon(matrix):
 
 def read_eq_string(eq_str):
 	'''only works with 3 vars x, y, z'''
-	var_list = eq.split(' ')
+	var_list = eq_str.split(' ')
 	rm_indexes = []
 	for i, item in enumerate(var_list):
 		if item == '-':
@@ -111,4 +111,4 @@ def solve_system(eq_list):
 	d['x'] = matrix[0,3]
 	d['y'] = matrix[1,3]
 	d['z'] = matrix[2,3]
-	return d
+	return d_
