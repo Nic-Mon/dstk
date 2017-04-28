@@ -91,7 +91,7 @@ def read_eq_string(eq_str):
 	for i in reversed(rm_indexes):
 		del var_list[i]
 
-	arr = np.array([0,0,0,0])
+	arr = np.array([0.,0,0,0])
 	for item in var_list:
 		if item[-1] == 'x':
 			if len(item) == 1: 
