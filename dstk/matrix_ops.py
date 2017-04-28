@@ -40,7 +40,7 @@ def is_echelon_form(matrix):
 	zeros_flag = False
 	#check all zeros rows at bottom
 	for row in range(m):
-		if (!np.array_equal(matrix[row,:], np.zeros(n))): 
+		if (not np.array_equal(matrix[row,:], np.zeros(n))): 
 			if zeros_flag: return False
 		else:
 			zeros_flag = True
