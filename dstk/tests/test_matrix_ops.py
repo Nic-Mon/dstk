@@ -19,6 +19,6 @@ def test_isRowEchelon():
 	matrix3 = np.matrix([[3,-9,9,-9,2,7], [0,0,0,0,1,3], [0,1,-2,5,1,-3]])
 
 	assert(is_row_echelon(matrix1))
-	assert(!is_row_echelon(matrix2))
-	assert(!is_row_echelon(matrix3))
+	assert(not is_row_echelon(matrix2))
+	assert(not is_row_echelon(matrix3))
 
