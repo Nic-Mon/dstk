@@ -19,3 +19,4 @@ class xnary():
 			x, r = divmod(x, self.n)
 			nums.append(str(r))
 		return ''.join(reversed(nums))
+

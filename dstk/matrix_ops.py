@@ -17,7 +17,7 @@ def row_reduce(matrix):
 	m, n = matrix.shape
 	print(m, n)
 	for k in range(min(m,n)):
-		i_max  = argmax (abs(matrix[k:,k]))
+		i_max  = np.argmax (abs(matrix[k:,k]))
 		matrix[[k, i_max]] = matrix[[i_max, k]]
 		for i in range(k, m):
 			f = matrix[i, k] / matrix[k, k]
