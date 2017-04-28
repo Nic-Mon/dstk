@@ -14,6 +14,7 @@ def one_hot_encode(data):
 
 def row_echelon_form(matrix):
 	'''returns row echelon form matrix'''
+	matrix = np.matrix(matrix, dtype=float32)
 	m, n = matrix.shape
 	for k in range(min(m,n)):
 		print(k)
