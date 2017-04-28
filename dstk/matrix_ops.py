@@ -16,22 +16,15 @@ def row_echelon_form(matrix):
 	'''returns row echelon form matrix'''
 	m, n = matrix.shape
 	for k in range(min(m,n)):
-		print(k)
-		print(matrix[k:,k])
 		i_max  = np.argmax (abs(matrix[k:,k]))
-		print(i_max)
-		print(i_max is None)
 		i_max = k+i_max
 		matrix[[k, i_max]] = matrix[[i_max, k]]
-		print(matrix)
+
 		for i in range(k+1, m):
-			print(matrix[i, k])
-			print(matrix[k, k])
 			f = matrix[i, k] / matrix[k, k]
 			for j in range(k+1, n):
 				matrix[i,j] = matrix[i,j] - (matrix[k,j]*f)
 			matrix[i,k] = 0
-			print(matrix)
 	return matrix
 
 def is_row_echelon(matrix):
@@ -74,10 +67,13 @@ def reduced_row_echelon(matrix):
 		for row in range(m):
 			if (matrix[row, col] != 0):
 				piv = matrix[row, col]
+				print(piv)
 				matrix[row, :] = matrix[row,:]/piv
 				prow = matrix[row, :]
+				print(prow)
 				for r in range(m):
 					if r is not row:
 						matrix[r,:] = matrix[r,:] - matrix[r,col]*prow
+				print(matrix)
 				break
 	return mat
