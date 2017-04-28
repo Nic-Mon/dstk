@@ -1,6 +1,6 @@
 import pytest
 from dstk.matrix_ops import one_hot_encode
-from dstk.matrix_ops import row_reduce
+from dstk.matrix_ops import is_row_echelon
 import numpy as np
 
 def test_oneHotEncode():
