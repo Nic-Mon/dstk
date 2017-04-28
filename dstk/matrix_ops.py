@@ -33,3 +33,25 @@ def row_echelon_form(matrix):
 			matrix[i,k] = 0
 			print(matrix)
 	return matrix
+
+def is_echelon_form(matrix):
+	'''returns true if matrix is in row echelon form, else False'''
+	m, n = matrix.shape
+	zeros_flag = False
+	#check all zeros rows at bottom
+	for row in range(m):
+		if (!np.array_equal(matrix[row,:], np.zeros(n))): 
+			if zeros_flag: return False
+		else:
+			zeros_flag = True
+
+	#check leading coefficients of lower rows much be strictly to the right of leading coefficients of higher rows
+	i = -1
+	for row in range(m):
+		for col in range(n):
+			if (matrix[row,col] != 0):
+				if(col < i): return False
+				i = col
+				break
+	return True
+
