@@ -70,6 +70,6 @@ def reduced_row_echelon(matrix):
 				mat[row, :] = mat[row,:]/piv
 				prow = mat[row, :]
 				for r in range(row):
-					mat[r,:] = mat[r,:] - mat[r,col]*prow=
+					mat[r,:] = mat[r,:] - mat[r,col]*prow
 				break
 	return mat
