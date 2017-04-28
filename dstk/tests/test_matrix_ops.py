@@ -40,4 +40,4 @@ def test_solveSystem():
 	ans['x'] = 2
 	ans['y'] = 3
 	ans['z'] = -1
-	assert(solve_system([eq1,eq2,eq3]) == ans)
+	assert(np.isclose(solve_system([eq1,eq2,eq3]), ans))
