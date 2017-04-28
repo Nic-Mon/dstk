@@ -31,4 +31,5 @@ def row_reduce(matrix):
 			for j in range(k, n):
 				matrix[i,j] = matrix[i,j] - (matrix[k,j]*f)
 			matrix[i,k] = 0
+			print(matrix)
 	return matrix
