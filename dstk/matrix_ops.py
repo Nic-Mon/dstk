@@ -12,3 +12,6 @@ def one_hot_encode(data):
 		matrix.append(line)
 	return np.matrix(matrix)
 
+def row_reduce(matrix):
+	'''returns row reduced matrix'''
+	return matrix
