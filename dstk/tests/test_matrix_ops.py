@@ -40,4 +40,6 @@ def test_solveSystem():
 	ans['x'] = 2
 	ans['y'] = 3
 	ans['z'] = -1
-	assert(np.isclose(solve_system([eq1,eq2,eq3]), ans))
+	d = solve_system([eq1,eq2,eq3])
+	for ket in ans:
+		assert np.isclose(ans[key], d[key])
