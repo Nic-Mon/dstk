@@ -31,3 +31,13 @@ def test_reducedRowEchelon():
 	matrix = np.matrix([[2., 1, -1, 8], [-3, -1, 2, -11], [-2, 1, 2, -3]])
 	m1 = reduced_row_echelon(matrix)
 	assert(is_reduced_row_echelon(m1))
+
+def test_solveSystem():
+	eq1 = '2x + y - z = 8'
+	eq2 = '-3x - y + 2z = -11'
+	eq3 = '-2x + y + 2z = -3'
+	ans = {}
+	ans['x'] = 2
+	ans['y'] = 3
+	ans['z'] = -1
+	assert(solve_system([eq1,eq2,eq3]) == ans)
