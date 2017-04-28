@@ -40,9 +40,7 @@ def is_row_echelon(matrix):
 	zeros_flag = False
 	#check all zeros rows at bottom
 	for row in range(m):
-		print(matrix[row,:])
-		print(np.array_equal(matrix[row,:], np.zeros(n)))
-		if (not np.array_equal(matrix[row,:], np.zeros(n))): 
+		if (np.count_nonzero(matrix[row,:]) != 0): 
 			if zeros_flag: return False
 		else:
 			zeros_flag = True
