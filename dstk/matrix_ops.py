@@ -63,18 +63,14 @@ def is_reduced_row_echelon(matrix):
 def reduced_row_echelon(matrix):
 	mat = row_echelon_form(matrix)
 	m,n = mat.shape
-	for col in range(n):
-		print(mat)
-		for row in range(m):
+	for row in range(m):
+		for col in range(n):
 			if (mat[row, col] != 0):
 				piv = mat[row, col]
-				print(piv)
 				mat[row, :] = mat[row,:]/piv
 				prow = mat[row, :]
-				print(prow)
-				for r in range(m):
-					if r is not row:
-						mat[r,:] = mat[r,:] - mat[r,col]*prow
+				for r in range(row):
+					mat[r,:] = mat[r,:] - mat[r,col]*prow
 				print(mat)
 				break
 	return mat
