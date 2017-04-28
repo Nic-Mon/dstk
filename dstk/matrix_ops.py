@@ -12,8 +12,8 @@ def one_hot_encode(data):
 		matrix.append(line)
 	return np.matrix(matrix)
 
-def row_reduce(matrix):
-	'''returns row reduced matrix'''
+def row_echelon_form(matrix):
+	'''returns row echelon form matrix'''
 	m, n = matrix.shape
 	for k in range(min(m,n)):
 		print(k)
