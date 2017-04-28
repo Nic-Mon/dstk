@@ -24,11 +24,11 @@ def row_reduce(matrix):
 		i_max = k+i_max
 		matrix[[k, i_max]] = matrix[[i_max, k]]
 		print(matrix)
-		for i in range(k, m):
+		for i in range(k+1, m):
 			print(matrix[i, k])
 			print(matrix[k, k])
 			f = matrix[i, k] / matrix[k, k]
-			for j in range(k, n):
+			for j in range(k+1, n):
 				matrix[i,j] = matrix[i,j] - (matrix[k,j]*f)
 			matrix[i,k] = 0
 			print(matrix)
