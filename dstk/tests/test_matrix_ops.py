@@ -41,5 +41,5 @@ def test_solveSystem():
 	ans['y'] = 3
 	ans['z'] = -1
 	d = solve_system([eq1,eq2,eq3])
-	for ket in ans:
+	for key in ans:
 		assert np.isclose(ans[key], d[key])

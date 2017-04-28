@@ -62,7 +62,6 @@ def is_reduced_row_echelon(matrix):
 
 def reduced_row_echelon(matrix):
 	mat = row_echelon_form(matrix)
-	print(mat)
 	m,n = mat.shape
 	for row in range(m):
 		for col in range(n):
@@ -73,7 +72,6 @@ def reduced_row_echelon(matrix):
 				for r in range(row):
 					mat[r,:] = mat[r,:] - mat[r,col]*prow
 				break
-				print(mat)
 	return mat
 
 def read_eq_string(eq_str):
@@ -123,9 +121,7 @@ def solve_system(eq_list):
 	for eq in eq_list:
 		mat.append(read_eq_string(eq))
 	matrix = np.matrix(mat)
-	print(matrix)
 	matrix = reduced_row_echelon(matrix)
-	print(matrix)
 	d = {}
 	d['x'] = matrix[0,3]
 	d['y'] = matrix[1,3]
