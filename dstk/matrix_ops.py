@@ -87,7 +87,7 @@ def read_eq_string(eq_str):
 		elif(item == '+' or item == '='):
 			rm_indexes.append(i)
 	for i in reversed(rm_indexes):
-		del rm_indexes[i]
+		del var_list[i]
 
 	arr = np.array([0,0,0,0])
 	for item in var_list:
