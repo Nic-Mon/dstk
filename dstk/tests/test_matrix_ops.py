@@ -1,7 +1,5 @@
 import pytest
-from dstk.matrix_ops import one_hot_encode
-from dstk.matrix_ops import is_row_echelon
-from dstk.matrix_ops import row_echelon_form
+from dstk.matrix_ops import *
 import numpy as np
 
 def test_oneHotEncode():
