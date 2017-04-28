@@ -34,7 +34,7 @@ def row_echelon_form(matrix):
 			print(matrix)
 	return matrix
 
-def is_echelon_form(matrix):
+def is_row_echelon(matrix):
 	'''returns true if matrix is in row echelon form, else False'''
 	m, n = matrix.shape
 	zeros_flag = False
