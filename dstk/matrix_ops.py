@@ -112,7 +112,7 @@ def read_eq_string(eq_str):
 				arr[2] = -1
 			else:
 				arr[2] = float(item[:-1])
-	arr[-1] = float(item[-1])
+	arr[-1] = float(var_list[-1])
 	return arr
 
 def solve_system(eq_list):
