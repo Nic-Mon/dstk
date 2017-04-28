@@ -15,6 +15,7 @@ def one_hot_encode(data):
 def row_echelon_form(matrix):
 	'''returns row echelon form matrix'''
 	m, n = matrix.shape
+	print(matrix)
 	for k in range(min(m,n)):
 		i_max  = np.argmax (abs(matrix[k:,k]))
 		i_max = k+i_max
@@ -25,6 +26,7 @@ def row_echelon_form(matrix):
 			for j in range(k+1, n):
 				matrix[i,j] = matrix[i,j] - (matrix[k,j]*f)
 			matrix[i,k] = 0
+		print(matrix)
 	return matrix
 
 def is_row_echelon(matrix):
